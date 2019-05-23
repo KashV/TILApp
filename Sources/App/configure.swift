@@ -12,6 +12,8 @@ public func configure(
 
     // Register routes to the router
     let router = EngineRouter.default()
+
+    
     try routes(router)
     services.register(router, as: Router.self)
 
