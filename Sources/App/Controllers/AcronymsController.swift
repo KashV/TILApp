@@ -36,7 +36,7 @@ struct AcronymsController: RouteCollection {
                 return Acronym.query(on: req).all()
         }
         
-        return sort == 0 ? Acronym.query(on: req).all() : Acronym.query(on: req).sort(\.id, .ascending).all()
+        return sort == 0 ? Acronym.query(on: req).all() : Acronym.query(on: req).sort(\.id, .descending).all()
     }
     
     func createHandler(
